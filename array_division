@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int a[5];
+    int i, division;
+
+    printf("Enter 5 elements:\n");
+    for (i = 0; i < 5; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    printf("\nYou have entered:\n");
+    for (i = 0; i < 5; i++) {
+        division = division/ a[i];
+        printf("a[%d] = %d\n", i, a[i]);
+    }
+
+    printf("\ndivision: %d\n", division);
+
+    return 0;
+}
