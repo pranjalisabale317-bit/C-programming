@@ -1,0 +1,16 @@
+#include<stdio.h>
+int sq(int *x)
+{
+    (*x)=(*x)*(*x);
+    printf("\nSquare:%d",*x);
+    return 1;
+}
+int main(){
+    int p;
+    printf("\n Enter p:");
+    scanf("\n %d",&p);
+    printf("\n before functional call:p=%d",p);
+    sq(&p);
+    printf("\n after functional call:p=%d",p);
+    return 0;
+}
