@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void eo() {
+    int x;
+    printf("\n Enter x:");
+    scanf("%d", &x);
+    if (x >= 18) {
+        printf("\n ur eligible for votting");
+    } else {
+        printf("\n ur not eligible for votting, ur child");
+    }
+}
+
+void Hello() {
+    printf("\n Hello world");
+}
+
+void add() {
+    int a, b;
+    printf("\nEnter a and b: ");
+    scanf("%d %d", &a, &b);
+    printf("\nAddition of a and b = %d", a + b);
+}
+
+int main() {
+     Hello();
+    eo();
+    add();
+    return 0;
+}
