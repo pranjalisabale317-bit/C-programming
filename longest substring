@@ -1,0 +1,24 @@
+#include <string.h>
+
+int lengthOfLongestSubstring(char* s) {
+    int lastIndex[256];
+    memset(lastIndex, -1, sizeof(lastIndex));
+    
+    int left = 0;
+    int maxLen = 0;
+    
+    for (int right = 0; s[right] != '\0'; right++) {
+        unsigned char c = (unsigned char)s[right];
+        if (lastIndex[c] >= left) {
+            left = lastIndex[c] + 1;
+        }
+        lastIndex[c] = right;
+        
+        int currentLen = right - left + 1;
+        if (currentLen > maxLen) {
+            maxLen = currentLen;
+        }
+    }
+    
+    return maxLen;
+}
